@@ -1,0 +1,96 @@
+/* SCSS for Main Content */
+
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Card styling for phone listings */
+  .phone-card {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Image styling */
+  .phone-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Title and price styling */
+  .phone-card h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .phone-card p {
+    font-size: 1.125rem;
+    color: #f39c12; /* vibrant orange */
+    font-weight: bold;
+  }
+  
+  /* Description text */
+  .phone-card .text-sm {
+    color: #666; /* Light gray for the description */
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Specs styling */
+  .phone-card .specs {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #333;
+  
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  /* Button styling */
+  .phone-card a {
+    display: inline-block;
+    background-color: #f39c12; /* vibrant orange */
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .phone-card a:hover {
+    background-color: #e67e22; /* dark orange */
+  }
+  
+  /* Responsive grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 640px) {
+    /* Mobile styling */
+    .phone-card {
+      padding: 1rem;
+    }
+    
+    .phone-card img {
+      height: 180px;
+    }
+  }
+  

@@ -1,9 +1,9 @@
-// Entry point for the build script in your package.json
-// app/javascript/application.js
-
 import React from "react";
-import ReactDOM from "react-dom/client";  // Use the new import
-import HelloReact from "./components/HelloReact"; // Import your component
+import ReactDOM from "react-dom/client";  // Using the React 18/19 import method
+import Header from "./common_resources/Header"; // Import your Header component
+import Footer from "./common_resources/Footer"; // Import your Footer component
+import MainContent from "./components/MainContent"; // Import your Footer component
+
 
 // Wait for the DOM to be ready
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,7 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (rootElement) {
     const root = ReactDOM.createRoot(rootElement); // Create root using React 18/19 method
-    root.render(<HelloReact />);  // Render your component
+    root.render(
+      <div className="app-container">
+        <Header /> {/* Render Header */}
+        <main className="main-content">
+          <MainContent /> {}
+        </main>
+        <Footer /> {/* Render Footer */}
+      </div>
+    );
   }
 });
-
